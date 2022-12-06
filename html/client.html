@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>p2pblog</title>
+<style>
+
+</style>
+</head>
+<body>
+<app></app>
+<template id="app">
+  <slot name="content"></slot>
+</template>
+<template id="posts">
+  <div slot="content">content from posts</div>
+</template>
+<template id="post">
+  <div slot="content">content from post</div>
+</template>
+<template id="files">
+  <div slot="content">content from files</div>
+</template>
+<template id="file">
+  <div slot="content">content from file</div>
+</template>
+<script>
+
+</script>
+</body>
+</html>

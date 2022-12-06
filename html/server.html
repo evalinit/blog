@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>p2pblog admin page</title>
+<style>
+
+</style>
+</head>
+<body>
+<script>
+(async function(){
+  CLIENT_APP_URL = localStorage.getItem('CLIENT_APP_URL')
+  CLIENT_APP_HTML = localStorage.getItem('CLIENT_APP_HTML')
+  const clientAppHtml = await ei.read(CLIENT_APP_URL)
+  console.log(clientAppHtml)
+  if (clientAppHtml == CLIENT_APP_HTML || confirm('Are you sure you want to serve the html logged in the console?')) {
+    localStorage.setItem('CLIENT_APP_HTML', clientAppHtml)
+  }
+})()
+</script>
+</body>
+</html>
